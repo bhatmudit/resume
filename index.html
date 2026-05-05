@@ -2,19 +2,29 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mudit Bhat - Resume</title>
+
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    font-family: "Computer Modern", "Latin Modern Math", "STIX Two Text", "Times New Roman", serif;
+    font-family: "STIX Two Text", "Times New Roman", Georgia, serif;
     font-size: 10.5pt;
     color: #000;
     background: #fff;
     max-width: 760px;
+    width: 100%;
     margin: 0 auto;
     padding: 28px 44px 36px;
     line-height: 1.35;
   }
+
   h1 {
     text-align: center;
     font-size: 20pt;
@@ -22,15 +32,25 @@
     letter-spacing: 0.04em;
     margin-bottom: 4px;
   }
+
   .contact {
     text-align: center;
     font-size: 9.5pt;
     margin-bottom: 10px;
     color: #000;
   }
-  .contact a { color: #000; text-decoration: none; }
+
+  .contact a {
+    color: #000;
+    text-decoration: underline;
+  }
+
   .contact span { margin: 0 3px; }
-  .section { margin-top: 9px; }
+
+  .section {
+    margin-top: 12px;
+  }
+
   .section-title {
     font-size: 10.5pt;
     font-weight: bold;
@@ -38,32 +58,58 @@
     letter-spacing: 0.08em;
     margin-bottom: 1px;
   }
+
   .section-rule {
     border: none;
     border-top: 0.8px solid #000;
     margin: 1px 0 5px;
   }
-  .entry { margin-bottom: 5px; }
+
+  .entry {
+    margin-bottom: 7px;
+  }
+
   .entry-row {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
-  .entry-org { font-weight: bold; font-size: 10.5pt; }
-  .entry-date { font-size: 10pt; }
-  .entry-role { font-style: italic; font-size: 10pt; }
-  .entry-loc { font-size: 10pt; }
+
+  .entry-org {
+    font-weight: bold;
+    font-size: 10.5pt;
+  }
+
+  .entry-date {
+    font-size: 10pt;
+  }
+
+  .entry-role {
+    font-style: italic;
+    font-size: 10pt;
+  }
+
+  .entry-loc {
+    font-size: 10pt;
+  }
+
   ul.bullets {
     margin-left: 14px;
     margin-top: 2px;
     list-style-type: disc;
   }
+
   ul.bullets li {
     font-size: 10pt;
-    margin-bottom: 1.5px;
+    margin-bottom: 3px;
     line-height: 1.35;
   }
-  .coursework { font-size: 10pt; margin-top: 2px; }
+
+  .coursework {
+    font-size: 10pt;
+    margin-top: 2px;
+  }
+
   .coursework-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -72,8 +118,16 @@
     list-style: disc;
     font-size: 10pt;
   }
-  .skills-block { font-size: 10pt; line-height: 1.5; }
-  .skills-block span { font-weight: bold; }
+
+  .skills-block {
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  .skills-block span {
+    font-weight: bold;
+  }
+
   .print-btn {
     display: block;
     margin: 20px auto 0;
@@ -86,16 +140,68 @@
     cursor: pointer;
     letter-spacing: 0.04em;
   }
-  .print-btn:hover { background: #f4f4f4; }
+
+  .print-btn:hover {
+    background: #f4f4f4;
+  }
+
+
+  @media (max-width: 600px) {
+    body {
+      padding: 16px;
+      font-size: 11pt;
+    }
+
+    h1 {
+      font-size: 18pt;
+    }
+
+    .entry-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .entry-date,
+    .entry-loc {
+      font-size: 9.5pt;
+    }
+
+    .coursework-grid {
+      grid-template-columns: 1fr;
+    }
+
+    ul.bullets {
+      margin-left: 16px;
+    }
+
+    .contact {
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+
+    .print-btn {
+      width: 100%;
+    }
+  }
+
+
   @media print {
-    .print-btn { display: none; }
-    body { padding: 0; }
+    .print-btn {
+      display: none;
+    }
+
+    body {
+      padding: 0;
+      max-width: none;
+    }
   }
 </style>
 </head>
+
 <body>
 
 <h1>Mudit Bhat</h1>
+
 <div class="contact">
   New Delhi, India
   <span>|</span>
@@ -107,19 +213,22 @@
 <div class="section">
   <div class="section-title">Education</div>
   <hr class="section-rule">
+
   <div class="entry">
     <div class="entry-row">
       <span class="entry-org">Guru Tegh Bahadur Institute of Technology (GTBIT)</span>
-      <span class="entry-date">Sep. 2024 &ndash; May 2028</span>
+      <span class="entry-date">Sep. 2024 – May 2028</span>
     </div>
+
     <div class="entry-row">
-      <span class="entry-role">Bachelor of Technology in Computer Science &amp; Engineering &mdash; CGPA: 8.0/10</span>
+      <span class="entry-role">Bachelor of Technology in Computer Science & Engineering — CGPA: 8.0/10</span>
       <span class="entry-loc">New Delhi, India</span>
     </div>
+
     <div class="coursework">
       <em>Relevant Coursework:</em>
       <ul class="coursework-grid">
-        <li>Data Structures &amp; Algorithms</li>
+        <li>Data Structures & Algorithms</li>
         <li>Operating Systems</li>
         <li>Computer Networks</li>
         <li>Database Management</li>
@@ -136,26 +245,34 @@
 
   <div class="entry">
     <div class="entry-row">
-      <span class="entry-org">Automated Attendance System &nbsp;&nbsp;<span style="font-weight:normal;">|</span>&nbsp;&nbsp;<span style="font-weight:normal;font-style:italic;">Python, Flask, SQLite, OpenCV, QR Code</span></span>
+      <span class="entry-org">
+        Automated Attendance System |
+        <span style="font-weight:normal;font-style:italic;">Python, Flask, SQLite, OpenCV, QR Code</span>
+      </span>
       <span class="entry-date">2025</span>
     </div>
+
     <ul class="bullets">
       <li>Built a full-stack Flask web application for attendance management supporting admin, teacher, and student roles with secure login and session handling.</li>
-      <li>Implemented QR code generation per student and real-time webcam-based QR scanning on the teacher's browser using OpenCV and pyzbar for instant attendance marking.</li>
-      <li>Integrated Excel report export and optional email delivery of attendance records using Flask-Mail and pandas.</li>
-      <li>Designed a SQLite database schema with SQLAlchemy ORM to manage users, sessions, and attendance records reliably.</li>
+      <li>Implemented QR code generation per student and real-time webcam-based QR scanning using OpenCV and pyzbar for instant attendance marking.</li>
+      <li>Integrated Excel report export and optional email delivery using Flask-Mail and pandas.</li>
+      <li>Designed a SQLite database schema with SQLAlchemy ORM to manage users, sessions, and attendance records.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-row">
-      <span class="entry-org">Content Update Tracker &nbsp;&nbsp;<span style="font-weight:normal;">|</span>&nbsp;&nbsp;<span style="font-weight:normal;font-style:italic;">Python, REST APIs, Bash, Discord Webhooks</span></span>
+      <span class="entry-org">
+        Content Update Tracker |
+        <span style="font-weight:normal;font-style:italic;">Python, REST APIs, Bash, Discord Webhooks</span>
+      </span>
       <span class="entry-date">2025</span>
     </div>
+
     <ul class="bullets">
-      <li>Developed an automated tracking script that polls a public REST API to detect new posts from configured creators and sends instant Discord webhook notifications.</li>
-      <li>Implemented retry logic, rate limiting, structured logging, and persistent JSON state storage to ensure reliable, unattended operation.</li>
-      <li>Deployed as a scheduled cron job on Linux, demonstrating hands-on experience with Unix automation and shell scripting.</li>
+      <li>Developed an automated tracking script that polls a public REST API to detect new posts and sends Discord webhook notifications.</li>
+      <li>Implemented retry logic, rate limiting, structured logging, and persistent JSON state storage.</li>
+      <li>Deployed as a cron job on Linux, demonstrating Unix automation and shell scripting.</li>
     </ul>
   </div>
 </div>
@@ -163,6 +280,7 @@
 <div class="section">
   <div class="section-title">Technical Skills</div>
   <hr class="section-rule">
+
   <div class="skills-block">
     <span>Languages:</span> Python, C, JavaScript, HTML/CSS, Bash<br>
     <span>Technologies:</span> Flask, SQLite, OpenCV, Linux, Git, REST APIs, Discord Webhooks<br>
@@ -174,19 +292,22 @@
 <div class="section">
   <div class="section-title">Leadership / Extracurricular</div>
   <hr class="section-rule">
+
   <div class="entry">
     <div class="entry-row">
-      <span class="entry-org">Google Developer Group (GDG) on Campus &ndash; GTBIT</span>
-      <span class="entry-date">2024 &ndash; Present</span>
+      <span class="entry-org">Google Developer Group (GDG) on Campus – GTBIT</span>
+      <span class="entry-date">2025 – Present</span>
     </div>
+
     <div class="entry-row">
       <span class="entry-role">Member, Cybersecurity Team</span>
       <span class="entry-loc">New Delhi, India</span>
     </div>
+
     <ul class="bullets">
-      <li>Participate in workshops, tech talks, and collaborative projects organized by the GDG chapter at GTBIT.</li>
-      <li>Active member of the GDG Cybersecurity team, participating in CTF challenges and security-focused learning sessions.</li>
-      <li>Developing practical skills in network security, ethical hacking fundamentals, and secure coding practices.</li>
+      <li>Participate in workshops, tech talks, and collaborative projects organized by the GDG chapter.</li>
+      <li>Active member of the cybersecurity team, participating in CTF challenges.</li>
+      <li>Developing skills in network security, ethical hacking, and secure coding practices.</li>
     </ul>
   </div>
 </div>
